@@ -1,0 +1,243 @@
+html
+{
+ margin:0;
+ padding:0;
+ height:100%;
+ background-color:#FFF;
+}
+
+img
+{
+	border:none;
+}
+
+#main-container3 {
+	margin: 0 auto;
+	clear:both;
+	padding: 0px;	
+	height:auto;
+	width: 960px;
+	padding:10px;	
+}
+
+#main-container5 {
+	margin: 0 auto;
+	clear:both;
+	padding: 0px;	
+	height: 110px;
+	width: 100%;
+	padding:0px;
+	background-image:url(images/Black%20Rubber%20Mat_196.jpg);
+	background-repeat:repeat;
+	
+
+}
+
+
+#main-container3 #psdgraphics-com-table
+{
+	position:relative;
+	top:150px;
+}
+
+
+
+#main-container3 #ad1
+{
+	position:absolute;
+	top:30px;
+	left:220px;
+}
+ #text-content
+{
+	margin:0 auto;
+	clear:both;
+	padding:0px;
+	width:960px;
+	top:150px;
+	height:650px;
+	position:relative;
+	line-height:150%;	
+}
+
+
+#footer-container {
+	float:none;
+	clear:both;
+	margin: 0px;
+	padding: 0px;
+	height: 200px;
+	width:100%;
+	background-color:#000;
+}
+
+
+body
+{
+	margin:0 auto 2em;
+	padding:0;
+	height:100%;
+	background-color:#FFF;	
+}
+
+#main-container1 {
+	margin: 0px;
+	padding: 0px;
+	height: 145px;
+	width: 100%;
+	 background-color:#FFF;
+}
+
+
+#main-container1 #headercontent {
+	margin:0 auto;
+	padding: 0px;
+	height: 145px;
+	width: 960px;
+	position: relative;
+	 background-color:#FFF;
+}
+#main-container2 {
+	background-color: #fcfcfc;
+	margin: 0px;
+	padding: 0px;
+	height: 370px;
+	width: 100%;
+}
+#main-container2 #slideshow {
+	margin: 0 auto;
+	padding: 0px;
+	height: 370px;
+	width: 960px;
+	left:70px;
+	background-color: #fcfcfc;
+	position: relative;
+}
+#main-container1 #headercontent #menu {
+	height: 30px;
+	width: 960px;
+	padding:10px;
+	 background-color:#FFF;
+	position: relative;
+}
+#main-container5 #footerContent {
+	margin: 0 auto;
+	padding: 0px;
+	height: 110px;
+	width: 960px;
+	position: relative;
+}
+
+#main-container5 #footerContent #followUsText
+{
+	bottom:80px;
+	left:750px;
+	position:absolute;
+}
+
+#main-container5 #footerContent #footerText
+{
+	left:400px;
+	bottom:15px;
+	position:absolute;
+}
+
+#main-container5 #footerContent #copyright
+{
+	left:400px;
+	top:80px;
+	position:absolute;
+}
+#main-container5 #footerContent #facebookImage {
+	top:15px;
+	left:700px;
+	position: absolute;
+}
+
+#main-container5 #footerContent #twitterImage
+{
+	position:absolute;
+	top:15px;
+	left:800px;
+}
+#main-container1 #headercontent #logo {
+	position: relative;
+	padding:10px;
+}
+
+#main-container1 #headercontent #logo #contact {
+	position: absolute;
+	left:660px;
+	bottom:15px;
+
+}
+.heading
+{
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	font-weight: normal;
+	color: #888888;
+
+}
+.main-heading {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	color: #888888;
+}
+
+.super-heading {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	font-weight: normal;
+	color: #888888;
+}
+
+.paragraph {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #888888;
+}
+img
+{
+	border:none;
+}
+a:link
+{
+	text-decoration:none;
+	color:#03F;
+}
+
+a:visited
+{
+	text-decoration:none;
+	color:#03F
+}
+
+#bannerwindow
+{
+	position:relative;
+	width:960px;
+	margin:0;
+	padding:0;
+}
+#bannerwindow #banner1
+{
+	position:absolute;
+	
+}
+#bannerwindow #banner2
+{
+	position:absolute;
+	left:750px;
+}
+#bannerwindow #banner3
+{
+	position:absolute;
+	top:80px;
+}
+#bannerwindow #banner4
+{
+	position:absolute;
+	left:600px;
+}

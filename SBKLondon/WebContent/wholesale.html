@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Whole Sale</title>
+<script src="script/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="swfobject.js"></script>
+
+<script type="text/javascript">
+		var flashvars = {};
+		var params = {};
+		params.base = "";
+		params.scale = "noscale";
+		params.salign = "tl";
+		params.wmode = "transparent";
+		params.allowFullScreen = "true";
+		params.allowScriptAccess = "always";
+		swfobject.embedSWF("PhotoWallFX.swf", "DivPhotoWallFX", "960", "400", "9.0.0", false, flashvars, params);
+	</script>
+<script>
+$(function() {
+    var d=300;
+    $('#navigation a').each(function(){
+        $(this).stop().animate({
+            'marginTop':'-80px'
+        },d+=150);
+    });
+ 
+    $('#navigation > li').hover(
+    function () {
+        $('a',$(this)).stop().animate({
+            'marginTop':'-2px'
+        },200);
+    },
+    function () {
+        $('a',$(this)).stop().animate({
+            'marginTop':'-80px'
+        },200);
+    }
+);
+});
+
+</script> 
+<style>
+html
+{
+	margin:0;
+	padding:0;
+	height:100%;
+	background-image:url(images/blue_space_background.png);
+	text-align:center;
+	background-repeat:no-repeat;
+	background-color:#20468f;
+	background-attachment: fixed;
+	background-position:center 0px;
+}
+body
+{
+	margin:0 auto 2em;
+	padding:0;
+	height:100%;
+}
+#headerContainer {
+	font-family:  Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+	padding: 0px;
+	height: 115px;
+	width: 960px;
+	z-index:-999;
+	text-align: center;
+}
+
+#headerContainer #logoContainer {
+	font-family: "Century Gothic", Century, Verdana;
+	font-size: 0.2em;
+	padding: 0px;
+	height: 110px;
+	width: 960px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#headerContainer #logoContainer #vectorArtContainer {
+	padding: 0px;
+	right:350px;
+	float: right;
+	position:relative;
+	margin-top:35px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+#headerContainer #logoContainer #vectorArtContainer #logo{
+	padding: 0px;
+	position:absolute;
+	right:240px;
+	margin-top:10px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+#headerContainer #logoContainer #vectorArtContainer #logo1{
+	padding: 0px;
+	position:absolute;
+	left:-10px;
+	margin-top:40px;
+	margin-right:0px;
+	margin-bottom:0px;
+	margin-left: 0px;
+}
+
+#headerContainer #logoContainer #vectorArtContainer #logo2{
+	padding: 0px;
+	position:absolute;
+	left:250px;
+	margin-top: 40px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+#headerContainer #logoContainer #logoLeftContainer #srcLogo {
+	position: absolute;
+	left:0px;
+	top:25px;
+	
+}
+#headerContainer #logoContainer #logoLeft {
+	position:absolute;
+	top:7px;
+}
+#headerContainer #logoContainer #logoLeftContainer {
+	float: left;
+	position: relative;
+}
+#headerContainer #logoContainer #navBar {
+	display:block;
+	position:relative;
+	left:340px;
+
+}
+	
+ul#navigation {
+    
+    margin: 0px ;
+    padding: 0px;
+    top: 0px;
+    list-style: none;
+    z-index:999999;
+    width:650px;
+}
+ul#navigation li {
+    width: 100px;
+    display:inline;
+    float:left;
+}
+ul#navigation li a {
+    display: block;
+    float:right;
+    margin-top: -2px;
+    width: 100px;
+    height: 25px;
+    background-color:#E7F2F9;
+    background-repeat:no-repeat;
+    background-position:50% 10px;
+    border:1px solid #BDDCEF;
+    text-decoration:none;
+    text-align:center;
+    padding-top:80px;
+    -moz-border-radius:0px 0px 10px 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -khtml-border-bottom-right-radius: 10px;
+    -khtml-border-bottom-left-radius: 10px;
+    opacity: 0.7;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+ul#navigation .home a:hover{
+	background-image: url(images/1340613472_home.png);
+	z-index:999;
+}
+ul#navigation .about a:hover      {
+	background-image: url(images/1340613655_administrator.png);
+	z-index:999;
+}
+ul#navigation .search a:hover      {
+	background-image:url(images/1343494370_shopping_trolley.png);
+	z-index:999;
+	
+}
+
+ul#navigation .rssfeed a:hover   {
+	background-image: url(images/1340613467_shopping_bag.png);
+	z-index:999;
+}
+
+ul#navigation .contact a:hover    {
+	background-image: url(images/1340613346_email_compose.png);
+	z-index:999;
+}
+
+ul#navigation .wholeSale a:hover      {
+	background-image: url(images/1340613342_delivery.png);
+	z-index:999;
+	
+}
+
+ul#navigation li a span{
+    letter-spacing:2px;
+    font-size:11px;
+    color:#60ACD8;
+    text-shadow: 0 -1px 1px #fff;
+}
+a:link
+{
+	text-decoration:none;
+	font-family: "Century Gothic", Century, Verdana;
+	font-size: 14px;
+	color: #888888;
+}
+a:visited
+{
+	text-decoration:none;
+	font-family: "Century Gothic", Century, Verdana;
+	font-size: 14px;
+	color: #888888;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+#headerContainer #logoContainer #vectorArtContainer #contactIcon {
+	position: absolute;
+	top:40px;
+	left:0px;
+	bottom:0px;
+	margin:0px;
+	padding:0px;
+}
+</style>
+<style>
+
+
+#footerContainer #footerContent #footerValues {
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	text-align: center;
+}
+.main-heading {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	color: #888888;
+}
+#container #DivPhotoWallFX {
+	height: 420px;
+	width: 960px;
+
+	
+}
+
+#container {
+	font-family: "Century Gothic", Century, Verdana;
+	padding: 20px;
+	height: auto;
+	width: 960px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	min-height:100%;
+	line-height: 125%;
+	background-color:#FFFFFF;
+}
+#container #flashBannner {
+	background-color: #FFF;
+	padding:0px;
+	height: 168px;
+	width: 940px;
+	position: relative;
+}
+
+#container #flashSpace {
+	background-color: #FFF;
+	height: 20px;
+	width: 960px;
+}
+
+#container #bodyContainer {
+	padding:5px;
+	width: 940px;
+	position: relative;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+#container #mainContent {
+	color: #888888;
+	float: left;
+	height: auto;
+	width: 520px;
+	min-height:100%;
+	float:left;
+	position: absolute;
+	padding-top:50px;
+	padding-left:10px;
+	background-color: #FFF;	
+}
+.paragraph {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #888888;
+}
+
+.paragraph1 {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #888888;
+	text-align:justify;
+}
+
+#container #bodyContainer #flashContent2 {
+	margin: 0px;
+	float: right;
+	height: 216px;
+	width:380px;
+	padding-top: 10px;
+	padding-right: 2px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#footerContainer #footerContent {
+	font-family:  Arial, Helvetica, sans-serif;
+	padding: 0px;
+	height: 110px;
+	width: 960px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	text-align: center;
+	position:relative;
+}
+
+#footerContainer #footerContent #faceBookContainer {
+	margin: 0px;
+	padding: 0px;
+	left:800px;
+	position: absolute;
+}
+
+#footerContainer #footerContent #twitterContainer {
+	margin: 0px;
+	padding: 0px;
+	left:860px;
+	bottom:55px;
+	position: absolute;
+}
+
+#footerContainer {
+	font-family:  Arial, Helvetica, sans-serif;
+	clear: both;
+	/*background-color: #EFEFEF;*/
+	background: #ffffff; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */
+	margin:0px;
+	height: 110px;
+	width: 100%;
+	padding-top:0px;
+	padding-right: 0px;
+	padding-bottom:0px;
+	padding-left: 0px;
+}
+
+#container #aboutUsParagraph {
+	margin: 0px;
+	padding-top:15px;
+	float: left;
+	width: 960px;
+	position: relative;
+}
+</style>
+</head>
+<body>
+<div id="headerContainer">
+<div id="logoContainer">
+<div id="logoLeftContainer">
+<div id="logoLeft">
+</div>
+<div id="srcLogo">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="100" height="75" id="sbkLogo" align="middle">
+				<param name="movie" value="sbkLogo.swf" />
+				<param name="quality" value="best" />
+				<param name="bgcolor" value="#ffffff" />
+				<param name="play" value="true" />
+				<param name="loop" value="true" />
+				<param name="wmode" value="transparent" />
+				<param name="scale" value="showall" />
+				<param name="menu" value="true" />
+				<param name="devicefont" value="false" />
+				<param name="salign" value="" />
+				<param name="allowScriptAccess" value="sameDomain" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="sbkLogo.swf" width="100" height="75">
+					<param name="movie" value="sbkLogo.swf" />
+					<param name="quality" value="best" />
+					<param name="bgcolor" value="#ffffff" />
+					<param name="play" value="true" />
+					<param name="loop" value="true" />
+					<param name="wmode" value="transparent" />
+					<param name="scale" value="showall" />
+					<param name="menu" value="true" />
+					<param name="devicefont" value="false" />
+					<param name="salign" value="" />
+					<param name="allowScriptAccess" value="sameDomain" />
+				<!--<![endif]-->
+					<a href="http://www.adobe.com/go/getflash">
+						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+					</a>
+				<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+</div>
+</div>
+<div id="vectorArtContainer">
+<div id="logo">
+<img src="sbkLogo.png" height="55" width="250"/>
+</div>
+<div id="logo1">
+</div>
+<div id="logo2">
+</div>
+<div id="contactIcon">
+<img src="images/phone_mail.png"/>
+</div>
+</div>
+<div id="navBar">
+<ul id="navigation">
+ <li class="home"><a href="index.html"><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">Home</span></a></li>
+ <li class="search"><a href="ranges.html"><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">Ranges</span></a></li>
+ <li class="rssfeed"><a href="shop.html"><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">Shop</span></a></li>
+  <li class="wholeSale"><a href="wholesale.html"><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">WholeSale</span></a></li>
+ <li class="about"><a href="aboutus.html"><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">About Us</span></a></li>
+ <li class="contact"><a href="contact.html"><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">Contact</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="container"> 
+<div id="flashBannner">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="940" height="168" id="SbkTruckFlash" align="middle">
+				<param name="movie" value="SbkTruckFlash.swf" />
+				<param name="quality" value="high" />
+				<param name="bgcolor" value="#ffffff" />
+				<param name="play" value="true" />
+				<param name="loop" value="true" />
+				<param name="wmode" value="transparent" />
+				<param name="scale" value="showall" />
+				<param name="menu" value="true" />
+				<param name="devicefont" value="false" />
+				<param name="salign" value="" />
+				<param name="allowScriptAccess" value="sameDomain" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="SbkTruckFlash.swf" width="940" height="168">
+					<param name="movie" value="SbkTruckFlash.swf" />
+					<param name="quality" value="high" />
+					<param name="bgcolor" value="#ffffff" />
+					<param name="play" value="true" />
+					<param name="loop" value="true" />
+					<param name="wmode" value="transparent" />
+					<param name="scale" value="showall" />
+					<param name="menu" value="true" />
+					<param name="devicefont" value="false" />
+					<param name="salign" value="" />
+					<param name="allowScriptAccess" value="sameDomain" />
+				<!--<![endif]-->
+					<a href="http://www.adobe.com/go/getflash">
+						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+					</a>
+				<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+
+</div>
+<br/>
+<h2 class="main-heading" style="text-align:left;">Whole Sale</h2>
+<div id="bodyContainer">
+<p class="paragraph1">
+SBK is your one-stop source for the largest selection of custom designed, high quality gifts and souvenirs in the industry. SBK offers 2000 high quality goods at below wholesale and bulk prices. Products are sold by the case and prices of our wholesale supplies are as cheap or in many cases cheaper than wholesale suppliers who buy in bulk. SBK prides itself on being a wholesale supplier who supplies existing businesses buying below wholesale products as well as helping entrepreneurs open new stores and businesses. Our below wholesale products minimum order is only a case of any product giving small businesses the opportunity to quickly turn merchandise rather than having the pounds tied up in inventory. And on top of these below wholesale and bulk prices which give our customers unbeatable values on not only products by the case, but many items sold individually, we have unbelievable customer service. Call us. We also offer an auto ship program for even greater savings.
+</p>
+<p class="paragraph1">
+Let us put our highly trained sales people and talented artists to work for you. We will be your partner in product development, helping to make your gift shop the best it can be! Our website displays only a sampling of the thousands of items that we offer. Please contact us so we may arrange a meeting at your office. All orders are delivered within days and are fully traceable from the time they leave our Store in London's main shopping street, Barking, until they reach the recipient address anywhere in the world. We are experts in local as well as international delivery and deliver to 25 countries around the world. We offer free shipping within UK for orders over €100 and a flat rate of €5 shipping to the UK for orders below €100.  Our customer base is extremely diverse, ranging from multiple retailers, wholesale and mail order to small independent retailers. In addition to supplying the UK gift market we also supply a number of clients in Europe, America and beyond with affordable design-led giftware products to suit virtually every type of market.
+</p>
+</div>
+</div>
+<div id="footerContainer">
+<div id="footerContent">
+<div id="faceBookContainer">
+<a href="https://www.facebook.com/pages/SBK-London/131089860371543"><img  src="images/FaceBook.png" height="50px" width="50px"/></a>
+</div>
+<div id="twitterContainer">
+<a href="https://twitter.com/sbklondon"><img  src="images/Twitter.png" height="60px" width="60px"/></a>
+</div>
+<div id="footerValues">
+<p class="paragraph"><a href="privacy.html">Privacy Policy</a> - <a href="delivery.html">Delivery</a> – <a href="termsConditions.html">Terms and Conditions </a>– <a href="carrers.html">Careers</a> -<a href="contactus.html">Contact Us</a></p>
+<p class="paragraph">102, Sixth Avenue, Manor Park, London, United Kingdom,  E12 5PS</p>
+<p class="paragraph">© 2012 All Rights Reserved</p>
+</div>
+</div>
+</div>
+
+</body>
+</html>

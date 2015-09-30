@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+function imgSwap() {
+  var thumbs = document.getElementById('thumbs').getElementsByTagName('img');
+  for (var i = 0, j = thumbs.length; i < j; i++) {
+    thumbs[i].onclick = swapThis;
+  }
+}
+function swapThis() {
+  var mi = document.getElementById('master-image');
+  mi.src = this.src.replace('thumb', 'master');
+  mi.parentNode.href = this.src.replace('thumb', 'superlarge');
+}
+if (window.addEventListener) window.addEventListener('load', imgSwap, false);
+else if (window.attachEvent) window.attachEvent('onload', imgSwap);
+</script>
+</head>
+<body>
+<a href="#"><img src="img/master/1_1.jpg" id="master-image" /></a>
+
+<ul id="thumbs">
+  <li><img src="img/thumb/1_1.jpg" /></li>
+  <li><img src="img/thumb/1_2.jpg" /></li>
+  <li><img src="img/thumb/1_3.jpg" /></li>
+</ul>
+</body>
+</html>
