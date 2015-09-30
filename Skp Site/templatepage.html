@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="script/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+		var flashvars = {};
+		var params = {};
+		params.base = "";
+		params.scale = "noscale";
+		params.salign = "tl";
+		params.wmode = "transparent";
+		params.allowFullScreen = "true";
+		params.allowScriptAccess = "always";
+		swfobject.embedSWF("PhotoWallFX.swf", "DivPhotoWallFX", "960", "400", "9.0.0", false, flashvars, params);
+	</script>
+
+<script>
+$(function() {
+    var d=300;
+    $('#navigation a').each(function(){
+        $(this).stop().animate({
+            'marginTop':'-80px'
+        },d+=150);
+    });
+ 
+    $('#navigation > li').hover(
+    function () {
+        $('a',$(this)).stop().animate({
+            'marginTop':'-2px'
+        },200);
+    },
+    function () {
+        $('a',$(this)).stop().animate({
+            'marginTop':'-80px'
+        },200);
+    }
+);
+});
+
+</script> 
+<style>
+html
+{
+	margin:0;
+	padding:0;
+	height:100%;
+	background-image: url(images/html_background.png);
+	background-repeat: repeat;
+}
+body
+{
+	margin:0 auto 2em;
+	padding:0;
+	height:100%;
+
+	
+}
+
+#headerContainer {
+	font-family: "Century Gothic", Century, Verdana;
+	/*background-color: #39F;*/
+	background: #87e0fd; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI0MiUiIHN0b3AtY29sb3I9IiM4N2UwZmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5OCUiIHN0b3AtY29sb3I9IiMwNWFiZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #87e0fd 42%, #05abe0 98%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(42%,#87e0fd), color-stop(98%,#05abe0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #87e0fd 42%,#05abe0 98%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #87e0fd 42%,#05abe0 98%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #87e0fd 42%,#05abe0 98%); /* IE10+ */
+background: linear-gradient(to bottom,  #87e0fd 42%,#05abe0 98%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-8 */
+
+	margin: 0px;
+	padding: 0px;
+	height: 110px;
+	width: 100%;
+}
+
+#headerContainer #logoContainer {
+	font-family: "Century Gothic", Century, Verdana;
+	font-size: 0.2em;
+	padding: 0px;
+	height: 110px;
+	width: 960px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#headerContainer #logoContainer #logo {
+	margin: 0px;
+	padding: 0px;
+	float: right;
+}
+#headerContainer #logoContainer #logoLeftContainer #srcLogo {
+	position: absolute;
+	
+}
+#headerContainer #logoContainer #logoLeft {
+	position:absolute;
+	top:7px;
+}
+#headerContainer #logoContainer #logoLeftContainer {
+	float: left;
+	position: relative;
+}
+</style>
+<style>
+
+ul#navigation {
+    
+    margin: 0px ;
+    padding: 0px;
+    top: 0px;
+    list-style: none;
+    z-index:999999;
+    width:500px;
+}
+#footerContainer #footerContent #footerValues {
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	text-align: center;
+}
+.main-heading {
+	font-family: "Century Gothic", Century, Verdana;
+	font-size: 20px;
+	font-weight: normal;
+	color: #888888;
+}
+#container #DivPhotoWallFX {
+	height: 420px;
+	width: 960px;
+
+	
+}
+ul#navigation li {
+    width: 100px;
+    display:inline;
+    float:left;
+}
+ul#navigation li a {
+    display: block;
+    float: right;
+    margin-top: -2px;
+    width: 100x;
+    height: 25px;
+    background-color: #E7F2F9;
+    background-repeat: no-repeat;
+    background-position: 50% 10px;
+    border: 1px solid #BDDCEF;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 40px;
+}
+#container {
+	font-family: "Century Gothic", Century, Verdana;
+	padding: 20px;
+	height: auto;
+	width: 960px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	min-height:100%;
+	background-color:#FFFFFF;
+}
+ul#navigation li a {
+    display: block;
+    float:right;
+    margin-top: -2px;
+    width: 100px;
+    height: 25px;
+    background-color:#E7F2F9;
+    background-repeat:no-repeat;
+    background-position:50% 10px;
+    border:1px solid #BDDCEF;
+    text-decoration:none;
+    text-align:center;
+    padding-top:80px;
+    -moz-border-radius:0px 0px 10px 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -khtml-border-bottom-right-radius: 10px;
+    -khtml-border-bottom-left-radius: 10px;
+    opacity: 0.7;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+#container #flashSpace {
+	background-color: #FFF;
+	height: 20px;
+	width: 960px;
+}
+
+#container #bodyContainer {
+	margin: 0px;
+	padding: 0px;
+	width: 960px;
+	position: relative;
+}
+
+#container #mainContent {
+	color: #888888;
+	float: left;
+	height: auto;
+	width: 520px;
+	min-height:100%;
+	float:left;
+	position: absolute;
+	padding-left:10px;
+	background-color: #FFF;	
+}
+.paragraph {
+	font-family: "Century Gothic", Century, Verdana;
+	font-size: 14px;
+	color: #888888;
+}
+#container #bodyContainer #flashContent2 {
+	margin: 0px;
+	float: right;
+	height: 216px;
+	width:380px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+ul#navigation .home a:hover{
+	background-image: url(images/1340613472_home.png);
+	z-index:999;
+}
+ul#navigation .about a:hover      {
+	background-image: url(images/1340613655_administrator.png);
+	z-index:999;
+}
+ul#navigation .search a:hover      {
+	background-image: url(images/1340613342_delivery.png);
+	z-index:999;
+	
+}
+
+ul#navigation .rssfeed a:hover   {
+	background-image: url(images/1340613467_shopping_bag.png);
+	z-index:999;
+}
+
+ul#navigation .contact a:hover    {
+	background-image: url(images/1340613346_email_compose.png);
+	z-index:999;
+}
+#footerContainer #footerContent {
+	font-family: "Century Gothic", Century, Verdana;
+	padding: 0px;
+	height: 110px;
+	width: 960px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	text-align: center;
+}
+ul#navigation li a:hover{
+     
+}
+#footerContainer {
+	font-family: "Century Gothic", Century, Verdana;
+	/*background-color: #EFEFEF;*/
+	background: #ffffff; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */
+
+
+
+
+
+
+
+	margin: 0px;
+	padding: 0px;
+	height: 110px;
+	width: 100%;
+}
+ul#navigation li a span{
+    letter-spacing:2px;
+    font-size:11px;
+    color:#60ACD8;
+    text-shadow: 0 -1px 1px #fff;
+}
+
+
+#headerContainer #logoContainer #navBar {
+	display: block;
+	float:right;
+	
+}
+</style>
+</head>
+<body>
+<div id="headerContainer">
+<div id="logoContainer">
+<div id="logoLeftContainer">
+<div id="logoLeft">
+<img src="images/vector_01.png" width="88px" height="100px"/>
+</div>
+<div id="srcLogo">
+<img src="images/skp_logo.png"/>
+</div>
+</div>
+<div id="logo">
+<img src="images/vector_art.png"/>
+</div>
+<div id="navBar">
+<ul id="navigation">
+ <li class="home"><a href=""><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">Home</span></a></li>
+ <li class="about"><a href=""><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">About Us</span></a></li>
+ <li class="search"><a href=""><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">Ranges</span></a></li>
+ <li class="rssfeed"><a href=""><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">Shop</span></a></li>
+ <li class="contact"><a href=""><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">Contact</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="container">
+<div id="flashSpace"></div>
+<div id="DivPhotoWallFX">
+</div>
+<div id="bodyContainer">
+<div id="mainContent">
+<h2 class="main-heading">Welcome</h2>
+<p class="paragraph">First of all, let me tell you one thing that I cannot give a unique model for this website I would like to create for our company. However I can give a certain direction with websites samples which can help you in creating better design. As long as I am a layman in this field, please use you brilliant effort to develop a good website. I don’t think it needs a heavy space.</p>
+</div>
+<div id="flashContent2">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="380" height="216" id="tech" align="middle">
+		<param name="allowScriptAccess" value="sameDomain" />
+		<param name="movie" value="flash/teddybear_slideshow.swf?xml_path=flash/slides.xml" />
+		<param name="quality" value="high" />
+		<embed src="flash/teddybear_slideshow.swf?xml_path=flash/slides.xml" quality="high" width="380" height="216" name="tech" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+
+	</object>
+</div>
+</div>
+</div>
+<div id="footerContainer">
+<div id="footerContent">
+<div id="footerValues">
+<p class="paragraph">Privacy Policy - Delivery – Terms and Conditions – Careers - Contact Us</p>
+<p class="paragraph">102, Sixth Avenue, Manor Park, London, United Kingdom,  E12 5PS</p>
+<p class="paragraph">© 2012 All Rights Reserved</p>
+</div>
+</div>
+</div>
+</body>
+</html>

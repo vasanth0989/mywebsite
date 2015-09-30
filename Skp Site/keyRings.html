@@ -1,0 +1,889 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>KeyRings</title>
+<script src="script/jquery-1.7.2.js"></script>
+<link href="accordionmenu.css" rel="stylesheet" type="text/css"/>
+<script src="jqzoom_ev-2.3/js/jquery.jqzoom-core.js" type="text/javascript"></script>
+<link rel="stylesheet" href="jqzoom_ev-2.3/css/jquery.jqzoom.css" type="text/css">
+<link href="modalPopLite1.3.1/modalPopLite.css" rel="stylesheet" type="text/css" />
+<script src="modalPopLite1.3.1/modalPopLite.js" type="text/javascript"></script>
+<script type="text/javascript" src="flash/s3Slider.js"></script>
+<script type="text/javascript">// <![CDATA[
+function setPopUpValue(idValue,infoValue)
+{
+	var sourceInfo=document.getElementById(idValue).getAttribute("src");
+	var forTitle=idValue+"title";
+	var forPrice=idValue+"price";
+	var titleInfo=document.getElementById(forTitle).innerHTML;
+	var priceInfo=document.getElementById(forPrice).innerHTML;
+	document.getElementById("zoomImage").innerHTML="";
+	document.getElementById("zoomImage").innerHTML=" <a href='"+sourceInfo+"' class='jqzoom'  id='zoomBigImage' title='KeyRings'><img src='"+sourceInfo+"' title='KeyRings' height='200' width='200' id='zoomSmallImage' style='border:0px;'></a>";
+	document.getElementById("itemTitle").innerHTML="";
+	document.getElementById("itemTitle").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;"+titleInfo;
+	document.getElementById("itemPrice").innerHTML="";
+	document.getElementById("itemPrice").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price: "+priceInfo;
+								
+				
+$(function () {
+	$('#zoomContainer').modalPopLite({ openButton: '#'+infoValue, closeButton: '#close-btn', isModal: true });
+		});
+$(function() {
+	$('.jqzoom').jqzoom({
+            zoomType: 'standard',
+            lens:false,
+            preloadImages:false,
+            alwaysOn:false
+        });
+	
+});
+		
+}
+// ]]></script>
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			// Store variable
+			var accordion_head = $('.accordion > li > a'),
+				accordion_body = $('.accordion li > .sub-menu');
+
+			// Open the first tab on load
+
+			accordion_head.first().addClass('active').next().slideDown('normal');
+
+			// Click function
+
+			accordion_head.on('click', function(event) {
+
+				// Disable header links
+				
+				event.preventDefault();
+
+				// Show and hide the tabs on click
+
+				if ($(this).attr('class') != 'active'){
+					accordion_body.slideUp('normal');
+					$(this).next().stop(true,true).slideToggle('normal');
+					accordion_head.removeClass('active');
+					$(this).addClass('active');
+				}
+
+			});
+
+		});
+
+	</script>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+		var flashvars = {};
+		var params = {};
+		params.base = "";
+		params.scale = "noscale";
+		params.salign = "tl";
+		params.wmode = "transparent";
+		params.allowFullScreen = "true";
+		params.allowScriptAccess = "always";
+		swfobject.embedSWF("PhotoWallFX.swf", "DivPhotoWallFX", "960", "400", "9.0.0", false, flashvars, params);
+	</script>
+
+<script>
+$(function() {
+    var d=300;
+    $('#navigation a').each(function(){
+        $(this).stop().animate({
+            'marginTop':'-80px'
+        },d+=150);
+    });
+ 
+    $('#navigation > li').hover(
+    function () {
+        $('a',$(this)).stop().animate({
+            'marginTop':'-2px'
+        },200);
+    },
+    function () {
+        $('a',$(this)).stop().animate({
+            'marginTop':'-80px'
+        },200);
+    }
+);
+});
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#slider').s3Slider({
+            timeOut: 3000
+        });
+    });
+</script> 
+<style>
+html
+{
+	margin:0;
+	padding:0;
+	height:100%;
+	background-image: url(images/html_background.png);
+	background-repeat: repeat;
+}
+body
+{
+	margin:0 auto 2em;
+	padding:0;
+	height:100%;
+
+	
+}
+h1,h2,h3,p
+{
+	margin:0;
+	padding:0;
+}
+
+#headerContainer {
+	font-family: "Century Gothic", Century, Verdana;
+	/*background-color: #39F;*/
+	background: #87e0fd; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI0MiUiIHN0b3AtY29sb3I9IiM4N2UwZmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5OCUiIHN0b3AtY29sb3I9IiMwNWFiZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #87e0fd 42%, #05abe0 98%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(42%,#87e0fd), color-stop(98%,#05abe0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #87e0fd 42%,#05abe0 98%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #87e0fd 42%,#05abe0 98%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #87e0fd 42%,#05abe0 98%); /* IE10+ */
+background: linear-gradient(to bottom,  #87e0fd 42%,#05abe0 98%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-8 */
+
+	margin: 0px;
+	padding: 0px;
+	height: 110px;
+	width: 100%;
+}
+
+#headerContainer #logoContainer {
+	font-family: "Century Gothic", Century, Verdana;
+	font-size: 0.2em;
+	padding: 0px;
+	height: 110px;
+	width: 960px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#headerContainer #logoContainer #vectorArtContainer {
+	padding: 0px;
+	right:350px;
+	float: right;
+	position:relative;
+	margin-top:35px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+#headerContainer #logoContainer #vectorArtContainer #logo{
+	padding: 0px;
+	position:absolute;
+	right:200px;
+	margin-top:40px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+#headerContainer #logoContainer #vectorArtContainer #logo1{
+	padding: 0px;
+	position:absolute;
+	left:-10px;
+	margin-top:40px;
+	margin-right:0px;
+	margin-bottom:0px;
+	margin-left: 0px;
+}
+
+#headerContainer #logoContainer #vectorArtContainer #logo2{
+	padding: 0px;
+	position:absolute;
+	left:250px;
+	margin-top: 40px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+#headerContainer #logoContainer #logoLeftContainer #srcLogo {
+	position: absolute;
+	
+}
+#headerContainer #logoContainer #logoLeft {
+	position:absolute;
+	top:7px;
+}
+#headerContainer #logoContainer #logoLeftContainer {
+	float: left;
+	position: relative;
+}
+#headerContainer #logoContainer #navBar {
+	display:block;
+	position:relative;
+	left:340px;
+
+}
+	
+ul#navigation {
+    
+    margin: 0px ;
+    padding: 0px;
+    top: 0px;
+    list-style: none;
+    z-index:999999;
+    width:650px;
+}
+ul#navigation li {
+    width: 100px;
+    display:inline;
+    float:left;
+}
+ul#navigation li a {
+    display: block;
+    float:right;
+    margin-top: -2px;
+    width: 100px;
+    height: 25px;
+    background-color:#E7F2F9;
+    background-repeat:no-repeat;
+    background-position:50% 10px;
+    border:1px solid #BDDCEF;
+    text-decoration:none;
+    text-align:center;
+    padding-top:80px;
+    -moz-border-radius:0px 0px 10px 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -khtml-border-bottom-right-radius: 10px;
+    -khtml-border-bottom-left-radius: 10px;
+    opacity: 0.7;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+ul#navigation .home a:hover{
+	background-image: url(images/1340613472_home.png);
+	z-index:999;
+}
+ul#navigation .about a:hover      {
+	background-image: url(images/1340613655_administrator.png);
+	z-index:999;
+}
+ul#navigation .search a:hover      {
+	background-image:url(images/1343494370_shopping_trolley.png);
+	z-index:999;
+	
+}
+
+ul#navigation .rssfeed a:hover   {
+	background-image: url(images/1340613467_shopping_bag.png);
+	z-index:999;
+}
+
+ul#navigation .contact a:hover    {
+	background-image: url(images/1340613346_email_compose.png);
+	z-index:999;
+}
+
+ul#navigation .wholeSale a:hover      {
+	background-image: url(images/1340613342_delivery.png);
+	z-index:999;
+	
+}
+#headerContainer #logoContainer #logoLeftContainer #srcLogo {
+	left:28px;
+}
+ul#navigation li a span{
+    letter-spacing:2px;
+    font-size:11px;
+    color:#60ACD8;
+    text-shadow: 0 -1px 1px #fff;
+}
+ a:link
+{
+	text-decoration:none;
+	font-family: "Century Gothic", Century, Verdana;
+	font-size: 14px;
+	color: #888888;
+}
+a:visited
+{
+	text-decoration:none;
+	font-family: "Century Gothic", Century, Verdana;
+	font-size: 14px;
+	color: #888888;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+#headerContainer #logoContainer #vectorArtContainer #contactIcon {
+	position: absolute;
+	top:0px;
+	left:70px;
+	margin:0px;
+	padding:0px;
+}
+</style>
+<style type="text/css" media="screen">
+#container #flashBannner {
+	background-color: #FFF;
+	padding:0px;
+	height: 168px;
+	width: 940px;
+	position: relative;
+}
+#slider {
+	width: 940px; /* important to be same as image width */
+	height:168px; /* important to be same as image height */
+	position:relative; /* important */
+	overflow: hidden; /* important */
+	float:right;
+	padding: 0px;
+	margin-top:0px;
+	margin-right: 0px;
+	margin-bottom:0px;
+	margin-left: 0px;
+	
+}
+
+#sliderContent {
+
+    width: 940px; /* important to be same as image width or wider */
+    position: absolute;
+	top: 0;
+	margin-left: 0;
+}
+
+.sliderImage {
+    float: left;
+    position: relative;
+	display: none;
+}
+.sliderImage span {
+    position: absolute;
+	font: 10px/15px Arial, Helvetica, sans-serif;
+    padding: 10px 13px;
+    width: 530px;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+    opacity: 0.7;
+    color: #fff;
+    display: none;
+}
+.clear {
+	clear: both;
+}
+.sliderImage span strong {
+    font-size: 14px;
+}
+.top {
+	top: 0;
+	left: 0;
+}
+.bottom {
+	bottom: 0;
+    left: 0;
+}
+ul { list-style-type: none;}
+
+</style>
+<style>
+#zoomContainer {
+	background-color: #FFF;
+	display:none;
+	margin: 0 auto;
+	padding: 0px;
+	height: 400px;
+	width: 630px;
+	position:relative;
+	border-radius: 12px; 
+	-moz-border-radius: 12px; 
+	-webkit-border-radius: 12px; 
+	border: 1px solid #800808;
+}
+#zoomContainer #closeIcon {
+	position:relative;
+	float:right;
+	z-index:999;
+	
+}
+#zoomContainer #zoomImage {
+	padding: 20px;
+	position: relative;
+}
+#zoomContainer #description {
+	background-color: #FFF;
+	margin: 0px;
+	top:20px;
+	left:275px;
+	height: 240px;
+	width: 300px;
+	position: absolute;
+}
+.main-heading {
+      font-family: "Century Gothic", Century, Verdana;
+      font-size: 20px;
+      font-weight: normal;
+      color: #888888;
+  }
+.paragraph {
+      font-family: "Century Gothic", Century, Verdana;
+      font-size: 14px;
+      color: #888888;
+  }
+#zoomContainer #zoomInfo {
+	position: relative;
+	top:180px;
+	right:180px;
+}
+#zoomContainer #priceInfo {
+	margin: 0px;
+	padding: 0px;
+	height: 120px;
+	width: 180px;
+	position: absolute;
+	left:50px;
+	top:225px;
+}
+</style>
+<style>
+
+#footerContainer #footerContent #footerValues {
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	text-align: center;
+}
+.main-heading {
+	font-family: "Century Gothic", Century, Verdana;
+	font-size: 20px;
+	font-weight: normal;
+	color: #888888;
+}
+#container #DivPhotoWallFX {
+	height: 420px;
+	width: 960px;
+
+	
+}
+
+#container {
+	font-family: "Century Gothic", Century, Verdana;
+	padding: 20px;
+	height: auto;
+	width: 960px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	min-height:100%;
+	background-color:#FFFFFF;
+}
+
+#container #flashSpace {
+	background-color: #FFF;
+	height: 20px;
+	width: 960px;
+}
+
+
+#container #mainContent {
+	color: #888888;
+	height: auto;
+	width: 220px;
+	float:left;
+	position: absolute;
+	padding-top:20px;
+	padding-left:0px;
+	background-color: #FFF;	
+	
+}
+#container #maincontent2 {
+
+	height: auto;
+	min-height:100%;
+	width: 718px;
+	left:225px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	position: relative;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	position:relative;
+	background-color: #FFF;	
+}
+#container #maincontent2 #itemTable {
+	height: auto;
+	width: 100%;
+}
+#container #maincontent2 #itemTable tr td h2 {
+	line-height: normal;
+	font-family: "Century Gothic", Century, Verdana;
+	font-size: 20px;
+	font-weight: normal;
+	color: #888888;
+	text-align: center;
+}
+#container #maincontent2 #itemTable tr td p {
+	line-height: normal;
+	font-family: "Century Gothic", Century, Verdana;
+	font-size: 18px;
+	color: #888888;
+	text-align: center;
+	background-color: #FFF;	
+}
+#container #mainContent #accordinMenu {
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	width: 220px;
+}
+.paragraph {
+	font-family: "Century Gothic", Century, Verdana;
+	font-size: 14px;
+	color: #888888;
+}
+#container  #flashContent2 {
+	margin: 0px;
+	float: right;
+	height: 216px;
+	width:380px;
+	padding-top: 10px;
+	padding-right: 2px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+#footerContainer #footerContent {
+	font-family: "Century Gothic", Century, Verdana;
+	padding: 0px;
+	height: 110px;
+	width: 960px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	text-align: center;
+}
+
+#footerContainer {
+	clear:both;
+	font-family: "Century Gothic", Century, Verdana;
+	/*background-color: #EFEFEF;*/
+	background: #ffffff; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */
+	margin: 0px;
+	padding: 0px;
+	height: 110px;
+	width: 100%;
+}
+
+
+#container #aboutUsParagraph {
+	margin: 0px;
+	padding-top:15px;
+	float: left;
+	width: 960px;
+	position: relative;
+}
+
+</style>
+</head>
+<body>
+<div id="headerContainer">
+<div id="logoContainer">
+<div id="logoLeftContainer">
+<div id="logoLeft">
+<img src="images/vector_01.png" width="88px" height="100px"/>
+</div>
+<div id="srcLogo">
+<img src="images/skp_logo.png"/>
+</div>
+</div>
+<div id="vectorArtContainer">
+<div id="logo">
+<img src="images/vector_art.png" width="75px" height="75px" style="opacity:0.6"/>
+</div>
+<div id="logo1">
+<img src="images/vector_art.png" width="75px" height="75px" style="opacity:0.5"/>
+</div>
+<div id="logo2">
+<img src="images/vector_art.png" width="75px" height="75px" style="opacity:0.5"/>
+</div>
+<div id="contactIcon">
+<img src="images/phoneIcon.png"/>
+</div>
+</div>
+<div id="navBar">
+<ul id="navigation">
+ <li class="home"><a href="index-01.html"><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">Home</span></a></li>
+ <li class="search"><a href="ranges.html"><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">Ranges</span></a></li>
+ <li class="rssfeed"><a href="shop.html"><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">Shop</span></a></li>
+  <li class="wholeSale"><a href="wholesale.html"><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">WholeSale</span></a></li>
+ <li class="about"><a href="aboutus.html"><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">About Us</span></a></li>
+ <li class="contact"><a href="contact.html"><span style="color:#09F;font-size:16px;font-family:'Century Gothic', Century, Verdana">Contact</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="container">
+<div id="flashBannner">
+<div id="slider">
+        <ul id="sliderContent">
+           <li class="sliderImage">
+                <a href="desingerBags.html"><img src="images/banner1.jpg" style="border:0px;" /></a>
+                <span class="bottom"><strong></strong></span>
+            </li>
+            <li class="sliderImage">
+                <a href="hoodies.html"><img src="images/banner2.jpg" style="border:0px;" /></a>
+                <span class="bottom"><strong></strong></span>
+            </li>
+            <li class="sliderImage">
+               <a href="teddybear.html"> <img src="images/banner3.jpg" style="border:0px;"  /></a>
+                <span class="bottom"><strong></strong></span>
+            </li>
+            <li class="sliderImage">
+                <a href="misc.html"><img src="images/banner4.jpg"  style="border:0px;"/></a>
+                <span class="bottom"><strong></strong></span>
+            </li>
+            <div class="clear sliderImage"></div>
+        </ul>
+    </div>
+</div>
+<div id="mainContent">
+<div id="accordinMenu">
+		<ul class="accordion">
+			<li id="one" class="files">
+
+				<a href="#one">Clothing</a>                   
+				<ul class="sub-menu">
+					<li><a href="tshirts.html"><em>01</em>T-shirts</a></li>
+					<li><a href="shirts.html"><em>02</em>Shirts</a></li>
+                     <li><a href="hoodies.html" ><em>08</em>Hoodies</a></li>
+					<li><a href="#"><em>03</em>Jeans</a></li>
+					<li><a href="#"><em>04</em>Trousers</a></li>
+					<li><a href="#"><em>05</em>Trackpants</a></li>
+                    <li><a href="#"><em>06</em>Sweaters</a></li>
+                    <li><a href="#"><em>07</em>Jackets</a></li>
+				</ul>
+
+			</li>
+			
+			<li id="two" class="mail">
+				<a href="#two">Toys</a>
+				<ul class="sub-menu">
+					<li><a href="teddybear.html"><em>01</em>Teddy Bears</a></li>	
+					<li><a href="#"><em>02</em>Dolls & Doll Houses</a></li>
+                    <li><a href="#"><em>03</em>Educational Toys</a></li>
+                    <li><a href="#"><em>04</em>Infant & Toddler Toys</a></li>
+                    <li><a href="#"><em>05</em>Musical Toys</a></li>
+                    <li><a href="#"><em>06</em>Outdoor Toys</a></li>
+                    <li><a href="#"><em>07</em>Puzzles & Board Games</a></li>
+                    <li><a href="#"><em>08</em>Remote Control Toys</a></li>
+                    <li><a href="#"><em>10</em>Vehicle & Action Toys</a></li>
+				</ul>
+			</li>
+			
+			<li id="three" class="cloud">
+				<a href="#three">Shoes</a>
+                <ul class="sub-menu">
+					<li><a href="#"><em>01</em>Casual Shoes</a></li>					
+					<li><a href="#"><em>02</em>Sneakers</a></li>
+					<li><a href="#"><em>03</em>Sports Shoes</a></li>
+					<li><a href="#"><em>04</em>Formal Shoes</a></li>
+					<li><a href="#"><em>05</em>Slippers</a></li>
+					<li><a href="#"><em>06</em>Sandals</a></li>
+                    <li><a href="#"><em>07</em>Flip Flops</a></li>
+                    <li><a href="#"><em>08</em>Boots</a></li>
+                    <li><a href="#"><em>09</em>Moccasins</a></li>
+				</ul>
+			</li>			
+			<li id="four" class="sign">
+				<a href="#four">Bags</a>
+				<ul class="sub-menu">
+					<li><a href="desingerBags.html"><em>01</em>Designer Bags</a></li>					
+					<li><a href="#"><em>02</em>Backpacks</a></li>
+					<li><a href="#"><em>03</em>Laptop Bags</a></li>
+                    <li><a href="#"><em>04</em>Digital Sleeves</a></li>
+                    <li><a href="#"><em>05</em>Strolleys</a></li>
+                    <li><a href="#"><em>06</em>Cases & Pouches</a></li>
+                    <li><a href="#"><em>07</em>Duffle Bags</a></li>
+                    <li><a href="#"><em>08</em>Sling Bags</a></li>
+                    <li><a href="#"><em>09</em>Briefcase</a></li>
+				</ul>
+			</li>
+			<li id="five" class="accesories">
+				<a href="#five">Accessories</a>
+				<ul class="sub-menu">
+					<li><a href="keyRings.html" style="background: #efefef;font-weight:bolder;"><em>01</em>Key Rings</a></li>					
+					<li><a href="magnets.html"><em>02</em>Magnets</a></li>
+					<li><a href="misc.html"><em>03</em>Misc</a></li>
+                    <li><a href="#"><em>04</em>Ties</a></li>
+                    <li><a href="#"><em>05</em>Caps</a></li>
+                    <li><a href="#"><em>06</em>Cuffinks</a></li>
+      			</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="maincontent2">
+<table width="100%" border="0" cellpadding="0" cellspacing="19" id="itemTable">
+<tr>
+<td>
+<img src="keyrings/1.JPG" width="200px" height="200px" id="1" />
+</td>
+<td>
+<img src="keyrings/2.JPG" width="200px" height="200px" id="2" />
+</td>
+<td>
+<img src="keyrings/3.JPG" width="200px" height="200px" id="3" />
+</td>
+</tr>
+<tr>
+          <td align="left" valign="top"><h2 id="1title">KeyRings 1</h2><p id="1price">$20</p>
+         </td>
+          <td align="left" valign="top"><h2 id="2title">KeyRings 2</h2><p id="2price">$35</p>
+          </td>
+          <td align="left" valign="top"><h2 id="3title">KeyRings 3</h2><p id="3price">$40</p>
+          </td>
+ </tr>
+ <tr>
+  <td align="center" valign="top" style="margin:0;padding:0"><img  src="images/moreinfo.png" style="margin:0;padding:0;cursor:pointer;" id="info1" onclick="setPopUpValue('1',this.id)"/>
+   </td>
+   <td align="center" valign="top" style="margin:0;padding:0"><img  src="images/moreinfo.png" style="margin:0;padding:0;cursor:pointer;" id="info2" onclick="setPopUpValue('2',this.id)"/>
+   </td>
+   <td align="center" valign="top" style="margin:0;padding:0"><img  src="images/moreinfo.png" style="margin:0;padding:0;cursor:pointer;" id="info3" onclick="setPopUpValue('3',this.id)"/>
+   </td>
+ </tr>
+<tr>
+<td>
+<img src="keyrings/4.JPG" width="200px" height="200px" id="4" />
+</td>
+<td>
+<img src="keyrings/5.JPG" width="200px" height="200px" id="5" />
+</td>
+<td>
+<img src="keyrings/6.JPG" width="200px" height="200px" id="6" />
+</td>
+</tr>
+<tr>
+          <td align="left" valign="top"><h2 id="4title">KeyRings 4</h2><p id="4price">$40</p>
+         </td>
+          <td align="left" valign="top"><h2 id="5title">KeyRings 5</h2><p id="5price">$35</p>
+          </td>
+          <td align="left" valign="top"><h2 id="6title">KeyRings 6</h2><p id="6price">$40</p>
+          </td>
+        </tr>
+  <tr>
+  <td align="center" valign="top" style="margin:0;padding:0"><img  src="images/moreinfo.png" style="margin:0;padding:0;cursor:pointer;" id="info4" onclick="setPopUpValue('4',this.id)"/>
+   </td>
+   <td align="center" valign="top" style="margin:0;padding:0"><img  src="images/moreinfo.png" style="margin:0;padding:0;cursor:pointer;" id="info5" onclick="setPopUpValue('5',this.id)"/>
+   </td>
+   <td align="center" valign="top" style="margin:0;padding:0"><img  src="images/moreinfo.png" style="margin:0;padding:0;cursor:pointer;" id="info6" onclick="setPopUpValue('6',this.id)"/>
+   </td>
+ </tr>       
+        <tr>
+         <td>
+<img src="keyrings/7.JPG" width="200px" height="200px" id="7" />
+</td>
+<td>
+<img src="keyrings/8.JPG" width="200px" height="200px" id="8" />
+</td>
+<td>
+<img src="keyrings/9.JPG" width="200px" height="200px" id="9"/>
+</td>
+ </tr>
+<tr>
+		<td align="left" valign="top"><h2 id="7title">KeyRings 7</h2><p id="7price">$30</p>
+         </td>
+          <td align="left" valign="top"><h2 id="8title">KeyRings 8</h2><p id="8price">$65</p>
+          </td>
+          <td align="left" valign="top"><h2 id="9title">KeyRings 9</h2><p id="9price">$40</p>
+          </td>
+</tr>
+ <tr>
+  <td align="center" valign="top" style="margin:0;padding:0"><img  src="images/moreinfo.png" style="margin:0;padding:0;cursor:pointer;" id="info7" onclick="setPopUpValue('7',this.id)"/>
+   </td>
+   <td align="center" valign="top" style="margin:0;padding:0"><img  src="images/moreinfo.png" style="margin:0;padding:0;cursor:pointer;" id="info8" onclick="setPopUpValue('8',this.id)"/>
+   </td>
+   <td align="center" valign="top" style="margin:0;padding:0"><img  src="images/moreinfo.png" style="margin:0;padding:0;cursor:pointer;" id="info9" onclick="setPopUpValue('9',this.id)"/>
+   </td>
+ </tr>   
+ <tr>
+         <td>
+<img src="keyrings/10.JPG" width="200px" height="200px" id="10" />
+</td>
+<td>
+<img src="keyrings/11.JPG" width="200px" height="200px" id="11" />
+</td>
+
+ </tr>
+<tr>
+<td align="left" valign="top"><h2 id="10title">KeyRings 10</h2><p id="10price">$30</p>
+         </td>
+          <td align="left" valign="top"><h2 id="11title">KeyRings 11</h2><p id="11price">$65</p>
+          </td>
+</tr>
+ <tr>
+  <td align="center" valign="top" style="margin:0;padding:0"><img  src="images/moreinfo.png" style="margin:0;padding:0;cursor:pointer;" id="info10" onclick="setPopUpValue('10',this.id)"/>
+   </td>
+   <td align="center" valign="top" style="margin:0;padding:0"><img  src="images/moreinfo.png" style="margin:0;padding:0;cursor:pointer;" id="info11" onclick="setPopUpValue('11',this.id)"/>
+   </td>
+ </tr> 
+</table>
+</div>
+</div>
+<div id="zoomContainer">
+   		 <div id="closeIcon">
+
+		<img src="images/close_Icon.png" id="close-btn"/>
+   		 </div>
+    <div id="zoomImage">
+    	
+        </div>
+        <div id="zoomInfo">
+        <img src="images/zoomInfo.png"/>
+        </div>
+        <div id="description">
+        <h2 class="main-heading">Product Description</h2>
+        <p class="paragraph">First of all, let me tell you one thing that I cannot give a unique model for this website I would like to create for our company. However I can give a certain direction with websites samples which can help you in creating better design. As long as I am a layman in this field, please use you brilliant effort to develop a good website. I don’t think it needs a heavy space.</p>
+        </div>
+        <div id="priceInfo">
+  		<h2 class="main-heading" style="padding:0;margin-left:0;margin-right:0;margin-top:10px;margin-bottom:0" id="itemTitle"></h2>
+       	<p class="paragraph" style="padding:0;margin-left:0;margin-right:0;margin-top:2px;margin-bottom:0;font-weight:bold" id="itemPrice"></p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/availableSoonBuy.png" style="padding:0;margin-left:0;margin-right:0;margin-top:5px;margin-bottom:0"/>
+        </div>
+    </div>
+<div id="footerContainer">
+<div id="footerContent">
+<div id="footerValues">
+<p class="paragraph"><a href="privacy.html">Privacy Policy</a> - <a href="delivery.html">Delivery</a> – <a href="termsConditions.html">Terms and Conditions </a>– <a href="carrers.html">Careers</a> -<a href="contactus.html">Contact Us</a></p>
+<p class="paragraph">102, Sixth Avenue, Manor Park, London, United Kingdom,  E12 5PS</p>
+<p class="paragraph">© 2012 All Rights Reserved</p>
+</div>
+</div>
+</div>
+</body>
+</html>
